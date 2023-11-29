@@ -7,6 +7,14 @@ body, html {
     height: 100%;
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
 .container-fluid {
     min-height: 100%;
 }
@@ -17,28 +25,83 @@ body, html {
 
 #firstNavRow h1 {
     padding: 1rem;
+    color: #f4f4f4;
 }
 
-
-.mySideNav a {
-    padding: 1.5rem;
-}
 
 #firstNavRow {
-    background-color: rgb(213, 217, 255);
+    background-color: rgb(175, 175, 175);
     padding: 0rem;
-
 }
 
 #secondNavRow {
     background-color: rgb(237, 237, 237);
-    height: 100%;
-    
 }
 
 #myList {
     height: 100%;
+    overflow: hidden;
+    transition: 2.5s;
 }
+
+#myList a {
+    display: flex;
+    background: transparent;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-right: 2rem;
+}
+
+#myList a.active {
+    border-style: none;
+    color: black;
+    background-color: rgb(217, 217, 217);
+}
+
+#myList a:hover {
+    color: black;
+    background-color: rgb(206, 206, 206);
+    border-style: none;
+}
+
+
+#recipeEscaper {
+    font-size: 2rem;
+    align-self: flex-start;
+    padding-bottom: 3rem;
+}
+
+#recipeInserter {
+    text-align: right;
+    padding: 2rem;
+    height: 0%;
+    overflow: hidden;
+    transition: 2.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+#recipeInserter h4 {
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #c9c9c9;
+}
+
+#recipeInserter li {
+    padding: 1rem;;
+}
+
+#exitArrow {
+    display: none;
+}
+
+#recipeInserter ul {
+    text-align: right;
+    direction: rtl;
+    padding-right: 1rem;
+}
+
 .iFrameSection {
     height: 1800px;
     background-color: #f4f4f4;
@@ -91,7 +154,7 @@ div#col-right {
 }
 
 #overflowDiv {
-    height: 90%;
+    height: 50%;
 }
 
 /* width */
