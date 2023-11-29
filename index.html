@@ -17,22 +17,41 @@
         <div class="col">
 
             <div class="row sticky-top" id="firstNavRow">
-                <div class="col-3">
-                    <h1 class="">WBS Cooking</h1>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                    <h1 class="myHeader">WBS Cooking&nbsp📖</h1>
                 </div>
 
 
-                <div class="col 9 myNavbar nav justify-content-center align-items-center">
-                    <a href="index.html" class='nav-link'>Home</a>
-                    <a href="recipes.html" class='nav-link'>Recipes</a>
-                    <a href="about.html" class='nav-link'>About</a>
+                <div class="col-12 col-sm-8 col-md-8 col-lg-9" id="interactionBar">
+                    <a href="index.html" class='nav-link'>
+                        <span class="material-symbols-outlined">
+                        home
+                        </span>
+                    </a>
+                    <a href="recipes.html" class='nav-link'><span class="material-symbols-outlined">
+                        ios_share
+                        </span>
+                    </a>
+                    <a onclick='openRecipe()' href="about.html" class='nav-link'><span class="material-symbols-outlined">
+                        favorite
+                        </span>
+                    </a>
+                    <a href="contact.html" class='nav-link'><span class="material-symbols-outlined">
+                        bookmarks
+                        </span>
+                    </a>
+                    <a href="login.html" class='nav-link'><span class="material-symbols-outlined">
+                        search
+                        </span>
+                    </a>
+
                 </div>
 
             </div>
 
             <div class="row" id="secondNavRow">
                 
-                <div class="col-3" id="col-left">
+                <div class="col-sm-4 col-md-4 col-lg-3" id="col-left">
                     <div class="mySideNav nav nav-tabs" id="myList" role="tablist">
                         <a onclick="openRecipe()" class="list-group-item list-group-item-action" data-toggle="tab" href="#recipe1" role="tab">Recipe #1</a>
                         <a onclick="openRecipe()" class="list-group-item list-group-item-action" data-toggle="tab" href="#recipe2" role="tab">Recipe #2</a>
@@ -48,7 +67,7 @@
 
                         <div id='recipeEscaper' onclick="closeRecipe()"><span id="exitArrow" class="material-symbols-outlined">
                             arrow_back
-                            </span></div>
+                        </span></div>
                         <h4>Ingredients</h4>
 
                         <ul>
@@ -70,19 +89,19 @@
                         </ul>
 
                     </div>
-
                 <div id="overflowDiv"></div>
 
                 </div>
 
-                <div class="col-9" id="col-right">
+                <div class="col-12 col-sm-8 col-md-8 col-lg-9" id="col-right">
                     <div class="iFrameSection">
+                        <!-- <button onclick="openColumnMenu()" id="activeColumn">CLICK ME</button> -->
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade" id="recipe1" role="tabpanel" aria-labelledby="recipe1">
                                 <div class="recipeCard">
                                     
 
-                                    <h3>Recipe #1</h3>
+                                    <h3 onclick='openColumnMenu()'>Recipe #1</h3>
                                     <h5>A delicious recipe that you can cook for up to 12 people...</h5>
 
                                     <img class='recipeImg' src="https://cdn.enjoytravel.com/img/travel-news/best-colombian-food-dishes-bandeja-paisa.jpg" alt="colombian-food">
@@ -96,7 +115,7 @@
                                             <li>Step 6 of the recipe.</li>
                                             <li>Step 7 of the recipe.</li>
                                             <li>Step 8 of the recipe.</li>
-                                            <li>Step 9 of the recipe.</li>
+                                            <li onclick="scrollToTop()">Step 9 of the recipe.</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -174,10 +193,15 @@
 
             </div>
 
-        </div>  
+            </div>  
 
+            <!-- MIGHT USE LATER FOR MOBILE NAVIGATION -->
+            
+            <!-- <div><button class="mobileNavBtn" id="ingredientsButton">Ingredients</button></div>
+            <div><button class="mobileNavBtn" id="scrollTopButton">Scroll Up</button></div> -->
+
+        </div>
     </div>
-
 </div>
 
 
