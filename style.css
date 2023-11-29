@@ -8,43 +8,81 @@ body, html {
 }
 
 .container-fluid {
-    border: 2px solid green;
-    min-height: 100%;
-
-}
-
-body {
-    background-color: beige;
-}
-
-
-.sidebarLeft {
-    background-color: white;
-    border: 2px solid red;
     min-height: 100%;
 }
 
-.sidebarLeft h1 {
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-
-.recipeList h4 {
-    padding: 1rem;
-    border: 1px solid black;
-    margin-bottom: 2rem;
-}
-
-.iFrameSection {
+#everythingRow {
     border: 2px solid greenyellow;
-    height: 900px;
-    background-image: url("https://via.placeholder.com/600x900");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    height: 100vh;
+}
 
+#firstNavRow h1 {
+    padding: 1rem;
 }
 
 
+.mySideNav a {
+    padding: 1.5rem;
+}
+
+#firstNavRow {
+    background-color: rgb(213, 217, 255);
+    padding: 1rem;
+
+}
+
+#secondNavRow {
+    background-color: rgb(237, 237, 237);
+    height: 100%;
+    padding-top: 2rem;
+    
+}
+
+#myList {
+    height: 100%;
+}
+.iFrameSection {
+    height: 1800px;
+    border: 2px solid greenyellow;
+    background-color: #f4f4f4;
+}
+
+div#col-right {
+    max-height: 100vh;          /* not available in Bootstrap */
+    overflow-y: scroll;
+    overflow-x: auto;
+    background-color: #f4f4f4;
+}
+
+#col-left {
+    overflow-y: scroll;
+    max-height: 100vh;          /* not available in Bootstrap */
+    overflow-x: auto;
+}
+
+#overflowDiv {
+    height: 90%;
+}
+
+/* width */
+body ::-webkit-scrollbar {
+    width: 8px;
+
+  }
+  
+  /* Track */
+body ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
 

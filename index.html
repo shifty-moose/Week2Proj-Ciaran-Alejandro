@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="style.css">
     <!-- Latest compiled and minified CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,49 +11,68 @@
 
 <div class="container-fluid">
     
-    <div class="row">
+    <div class="row" id="everythingRow">
 
-        <div class="sidebarLeft col-4">
+        <div class="col">
 
-            <h1>WEBSITE NAME</h1>
+            <div class="row sticky-top" id="firstNavRow">
+                <div class="col-3">
+                    <h1 class="">WEBSITE NAME</h1>
+                </div>
 
-            <div class="recipeList">
-                <h4>Recipe #1</h4>
-                <h4>Recipe #2</h4>
-                <h4>Recipe #3</h4>
-                <h4>Recipe #4</h4>
-                <h4>Recipe #5</h4>
-                <h4>Recipe #6</h4>
-                <h4>Recipe #7</h4>
-                <h4>Recipe #8</h4>
-            </div>
-        </div>  
 
-        <div class="col-8">
-
-            <div class="row">
-
-                <div class="col-12">
-
-                    <div class="myNavbar nav justify-content-center">
-                        <a href="index.html" class='nav-link'>Home</a>
-                        <a href="recipes.html" class='nav-link'>Recipes</a>
-                        <a href="about.html" class='nav-link'>About</a>
-                    </div>
+                <div class="col 9 myNavbar nav justify-content-center align-items-center">
+                    <a href="index.html" class='nav-link'>Home</a>
+                    <a href="recipes.html" class='nav-link'>Recipes</a>
+                    <a href="about.html" class='nav-link'>About</a>
                 </div>
 
             </div>
 
-            <div class="row">
+            <div class="row" id="secondNavRow">
+                
+                <div class="col-3" id="col-left">
+                    <div class="mySideNav nav nav-tabs" id="myList" role="tablist">
+                        <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#recipe1" role="tab">Recipe #1</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#recipe2" role="tab">Recipe #2</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#recipe3" role="tab">Recipe #3</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#recipe4" role="tab">Recipe #4</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#home" role="tab">Recipe #5</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#profile" role="tab">Recipe #6</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#messages" role="tab">Recipe #7</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="tab" href="#settings" role="tab">Recipe #8</a>
+                    </div>
+                    <div id="overflowDiv"></div>
 
-                <div class="col">
+                </div>
+
+                <div class="col-9" id="col-right">
                     <div class="iFrameSection">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="recipe1" role="tabpanel" aria-labelledby="recipe1">
+
+                                <div class="card">
+                                    <div class="card-title">Birthday Cake</div>
+
+                                    <img class='card-img-top' src="https://suppliesforcandles.co.uk/8235-medium_default/birthday-cake-fragrance-oil.jpg" class="card-img-top" alt="Recipe Image">
+                                    <div class="card-body">
+                                        <div class="card-subheading">A delicious birthday cake you can make to celebrate someones special day!</div>
+                                        <p class="card-text">Instructions: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                            <div class="tab-pane fade" id="recipe2" role="tabpanel" aria-labelledby="recipe2">...Test 2</div>
+                            <div class="tab-pane fade" id="recipe3" role="tabpanel" aria-labelledby="recipe3">...Test 3</div>
+                            <div class="tab-pane fade" id="recipe4" role="tabpanel" aria-labelledby="recipe4">...Test 4</div>
+                          </div>
                     </div>
+                    <div id="overflowDiv"></div>
+
                 </div>
+
             </div>
 
-            
-        </div>
+        </div>  
 
     </div>
 
@@ -62,12 +80,9 @@
 
 
 
-
-
    
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
