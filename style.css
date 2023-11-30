@@ -6,45 +6,253 @@
 body, html {
     height: 100%;
 }
+html {
+    scroll-behavior: smooth;
+  }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+
+.tab-pane.fade {
+    transition: 1.5s;
+}
 
 .container-fluid {
-    border: 2px solid green;
-    min-height: 100%;
-
-}
-
-body {
-    background-color: beige;
-}
-
-
-.sidebarLeft {
-    background-color: white;
-    border: 2px solid red;
     min-height: 100%;
 }
 
-.sidebarLeft h1 {
-    padding: 1rem;
+#everythingRow {
+    height: 100vh;
+}
+
+#firstNavRow h1 {
+    color: #484848;
+    font-size: 2rem;
     text-align: center;
-    margin-bottom: 4rem;
+    padding: 1rem;
+}
+
+#firstNavRow {
+    background-color: rgb(175, 175, 175);
+    flex-direction: column;
+    align-items: center;
 }
 
 
-.recipeList h4 {
-    padding: 1rem;
-    border: 1px solid black;
-    margin-bottom: 2rem;
+
+
+.nav-link {
+    color: rgb(232, 232, 232);
+}
+
+.nav-link:hover {
+    color: rgb(81, 81, 81);
+}
+
+#interactionBar {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    padding-bottom: 0.4rem;
+}
+
+#secondNavRow {
+    background-color: rgb(237, 237, 237);
+}
+
+#myList {
+    height: 100%;
+    overflow: hidden;
+    transition: 1.5s;
+}
+
+#myList a {
+    display: flex;
+    background: transparent;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-right: 2rem;
+}
+
+#myList a.active {
+    border-style: none;
+    color: black;
+    background-color: rgb(217, 217, 217);
+    border: 2px solid #c9c9c9;
+}
+
+#myList a:hover {
+    color: black;
+    background-color: rgb(206, 206, 206);
+    border-style: none;
+}
+
+
+#recipeEscaper {
+    font-size: 2rem;
+    align-self: flex-start;
+    padding-bottom: 3rem;
+}
+
+#recipeInserter {
+    text-align: right;
+    padding: 2rem;
+    height: 0%;
+    overflow: hidden;
+    transition: 1.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+#recipeInserter h4 {
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #c9c9c9;
+}
+
+#recipeInserter li {
+    padding: 1rem;;
+}
+
+#exitArrow {
+    display: none;
+}
+
+#recipeInserter ul {
+    text-align: right;
+    direction: rtl;
+    padding-right: 1rem;
 }
 
 .iFrameSection {
-    border: 2px solid greenyellow;
-    height: 900px;
-    background-image: url("https://via.placeholder.com/600x900");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    height: 1800px;
+    background-color: #f4f4f4;
+}
+
+.iFrame {
+    width: 100%;
+    height: 100px;
+    
+}
+
+
+div#col-right {
+    max-height: 100vh;          /* not available in Bootstrap */
+    overflow-y: scroll;
+    overflow-x: auto;
+    background-color: #f4f4f4;
+    padding-right: 0rem;
+    padding-left: 0rem;
 
 }
 
+#col-left {
+    overflow-y: scroll;
+    max-height: 100vh;          /* not available in Bootstrap */
+    background-color: #efefef;
+    border-right: 2px solid #c9c9c9;
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+
+.recipeCard {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 10rem;
+}
+
+.recipeCard ol {
+    line-height: 4rem;
+}
+
+
+.recipeInstructions {
+    padding-left: 1rem;
+
+}
+.recipeImg {
+    height: 30rem;
+    object-fit: cover;
+    margin: 2rem 0rem;
+    border-radius: 0.5rem;
+    width: auto;
+}
+
+#overflowDiv {
+    height: 50%;
+}
+
+/* width */
+body ::-webkit-scrollbar {
+    width: 8px;
+}
+  
+  /* Track */
+body ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+  #ingredientBorderDiv {
+    display: none;
+  }
+
+@media only screen and (max-width: 576px) {
+
+    #col-left {
+        transition: 2s;
+        overflow: hidden;  
+    } 
+
+    .iFrameSection {
+        overflow-y: auto;
+    }
+
+    #recipeInserter {
+    }
+
+}
+
+@media only screen and (max-width: 776px) {
+
+    #recipeInserter li {
+        padding: 0.2rem;
+    }
+
+    #overflowDiv {
+        height: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    #firstNavRow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #firstNavRow h1{ 
+        text-align: right;
+        width: 100%;
+    }
+}
 
 
