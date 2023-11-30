@@ -1,3 +1,8 @@
+const clickMessage = document.querySelector('#messageButton').addEventListener('click', () => {
+    alert('you clicked me, mate! <3');
+});
+
+
 const openRecipe = () => { 
     document.getElementById("recipeInserter").style.visibility = "visible";
     document.getElementById("recipeInserter").style.height = "100%";

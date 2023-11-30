@@ -45,7 +45,10 @@ html {
 }
 
 
-
+.click-home:hover {
+    color: rgb(81, 81, 81);
+    text-decoration: none; 
+}
 
 .nav-link {
     color: rgb(232, 232, 232);
@@ -132,16 +135,38 @@ html {
 }
 
 .iFrameSection {
-    height: 1800px;
+    height: auto;
     background-color: #f4f4f4;
+    border: solid 2px yellow;
 }
 
-.iFrame {
-    width: 100%;
-    height: 100px;
+.iframe-space {
     
+    height: 20rem;
+    border: solid 2px green;
 }
 
+.btn-custom {
+    background-color: grey;
+    color:white;
+    transition: box-shadow 0.5s;
+}
+
+.btn-custom:hover {
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 10px green;
+}
+
+.btn-custom:active {
+    box-shadow: 0 0 10px yellow;
+}
+
+/* how to get rid of the blue effect after click 
+.btn-custom:focus {
+    box-shadow: none;
+}
+ */
 
 div#col-right {
     max-height: 100vh;          /* not available in Bootstrap */
