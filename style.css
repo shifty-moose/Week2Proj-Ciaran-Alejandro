@@ -135,9 +135,19 @@ html {
 }
 
 .iFrameSection {
-    height: auto;
     background-color: #f4f4f4;
     border: solid 2px yellow;
+    display: flex;
+    
+}
+
+
+.infoButton {
+    margin-bottom: 0;
+}
+
+#messageButton {
+    margin-bottom: 0;
 }
 
 .iframe-space {
@@ -176,6 +186,10 @@ div#col-right {
     padding-right: 0rem;
     padding-left: 0rem;
 
+}
+
+div#col-right > * {
+    padding: 3rem;
 }
 
 #col-left {
@@ -252,8 +266,8 @@ body ::-webkit-scrollbar-track {
         overflow-y: auto;
     }
 
-    #recipeInserter {
-    }
+ /*    #recipeInserter {
+    } */
 
 }
 
