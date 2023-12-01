@@ -136,7 +136,6 @@ html {
 
 .iFrameSection {
     background-color: #f4f4f4;
-    border: solid 2px yellow;
     display: flex;
     
 }
@@ -151,9 +150,7 @@ html {
 }
 
 .iframe-space {
-    
-    height: 20rem;
-    border: solid 2px green;
+     height: 20rem;
 }
 
 .btn-custom {
